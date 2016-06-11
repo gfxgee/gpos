@@ -16,6 +16,15 @@ class AppServiceProvider extends ServiceProvider
     {
         $menus = MenuDropdown::all();
         view()->share([ 'menus' => $menus ]);
+        app('view')->composer('layouts.base', function ($view) {
+            $action = app('request')->route()->getAction();
+
+            $controller = class_basename($action['controller']);
+
+            list($controller, $action) = explode('@', $controller);
+
+            $view->with(compact('controller', 'action'));
+        });
     }
 
     /**

@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index' );
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/dashboard', 'HomeController@index');
 
 Route::get('/setting', 'HomeController@setting');
+
+Route::get('/customers', 'CustomerController@index');
