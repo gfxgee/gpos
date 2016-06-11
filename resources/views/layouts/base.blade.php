@@ -63,7 +63,7 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
+        Page Header {{ $controller.' '. $action}}
         <small>Optional description</small>
       </h1>
       <ol class="breadcrumb">
@@ -74,7 +74,8 @@ desired effect
 
     <!-- Main content -->
     <section class="content">
-
+      
+      @yield('content')
       <!-- Your Page Content Here -->
 
     </section>

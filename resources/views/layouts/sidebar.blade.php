@@ -33,7 +33,7 @@
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="#"><i class="fa fa-link"></i> <span>Customers</span></a></li>
+        <li><a href="{{ url('customers')}}"><i class="fa fa-link"></i> <span>Customers</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Employees</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Items</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Item Kits</span></a></li>
