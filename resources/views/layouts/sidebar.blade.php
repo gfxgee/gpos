@@ -33,11 +33,11 @@
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="{{ url('customers')}}"><i class="fa fa-link"></i> <span>Customers</span></a></li>
+        <li class="{{ ($controller == 'CustomerController' ? 'active' : '') }}"><a href="{{ url('customers')}}"><i class="fa fa-link"></i> <span>Customers</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Employees</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Items</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Item Kits</span></a></li>
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Sales</span></a></li>
+        <li><a href="#"><i class="fa fa-link"></i> <span>Sales</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Suppliers</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">

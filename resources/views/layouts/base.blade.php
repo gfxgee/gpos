@@ -23,7 +23,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect.
   -->
   <link rel="stylesheet" href="{{ asset('adminlte/dist/css/skins/skin-blue.min.css') }}">
-
+  <link rel="stylesheet" href="{{ asset('adminlte/dist/css/skins/skin-green.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('adminlte/dist/css/skins/skin-red.min.css') }}">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -61,16 +62,16 @@ desired effect
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header {{ $controller.' '. $action}}
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
+   <!--  <section class="content-header">
+     <h1>
+       Page Header {{ $controller.' '. $action}}
+       <small>Optional description</small>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+       <li class="active">Here</li>
+     </ol>
+   </section> -->
 
     <!-- Main content -->
     <section class="content">

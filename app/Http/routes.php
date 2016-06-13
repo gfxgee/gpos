@@ -20,3 +20,4 @@ Route::get('/dashboard', 'HomeController@index');
 Route::get('/setting', 'HomeController@setting');
 
 Route::get('/customers', 'CustomerController@index');
+Route::get('/customers/add', 'CustomerController@add');

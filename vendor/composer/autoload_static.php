@@ -254,8 +254,8 @@ class ComposerStaticInit4a642abefbc6bf79d3efc6c7d2502283
 
     public static $classMap = array (
         'AddUsernameToUsersTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_08_022728_add_username_to_users_table.php',
-        'AddUsersMenuValues' => __DIR__ . '/../..' . '/database/migrations/2016_06_08_023553_add_users_menu_values.php',
-        'CreateMenuDropdownsTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_08_025657_create_menu_dropdowns_table.php',
+        'AddUsersMenuValues' => __DIR__ . '/../..' . '/database/migrations/2016_06_08_023553_create_users_menu_values.php',
+        'CreateCustomerTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_13_063918_create_customer_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

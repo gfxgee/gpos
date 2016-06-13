@@ -13,4 +13,9 @@ class CustomerController extends Controller
     {
     	return view('page.customer');
     }
+
+    public function add()
+    {
+    	return view('page.customer-new');
+    }
 }
