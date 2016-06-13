@@ -9,7 +9,8 @@
                 <h3 class="box-title">Add Customer</h3>
             </div><!-- /.box-header -->
             <div class="box-body">
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="post" action="{{ url('customers/insert') }}">
+                    {{ csrf_field() }}
                     <div class="box-body">
                         <div class="form-group">
                             <label class="col-sm-2 control-label">First Name</label>
@@ -42,12 +43,12 @@
                             </div>
                         </div>
                     </div>
-                </form>
             </div><!-- /.box-body -->
             <div class="box-footer">
                 <button type="button" class="btn btn-danger"><i class="fa fa-arrow-left"></i> Back</button>
                 <button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> Add</button>
             </div><!-- box-footer -->
+             </form>
         </div><!-- /.box -->
     </div>
 </div>

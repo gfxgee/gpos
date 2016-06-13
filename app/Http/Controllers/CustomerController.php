@@ -18,4 +18,10 @@ class CustomerController extends Controller
     {
     	return view('page.customer-new');
     }
+
+    public function insert()
+    {
+    	 $input = Input::all();
+    	 var_dump($input);
+    }
 }
