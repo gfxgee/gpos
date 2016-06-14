@@ -19,7 +19,6 @@ class CreateCustomerTable extends Migration
             $table->string('lastname');
             $table->string('phonenumber');
             $table->string('email')->unique();
-            $table->rememberToken();
             $table->timestamps();
         });
     }

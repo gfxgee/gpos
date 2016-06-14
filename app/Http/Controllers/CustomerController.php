@@ -2,9 +2,8 @@
 
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
 
@@ -28,7 +27,17 @@ class CustomerController extends Controller
 	        'email' => 'required|unique:customers|max:255'
 	    ]);
 
-    	$name = $request->input('firstname');
-    	echo $name;
+    	$fname = $request->input('firstname');
+        $mname = $request->input('middlename');
+        $lname = $request->input('lastname');
+        $email = $request->input('email');
+        $phonenumber = $request->input('phonenumber');
+        $id = DB::table('customers')->insertGetId(
+            ['email'    => $email,
+             'firstname'    =>  $fname,
+             'middlename'   =>  $mname,
+             'lastname'     =>  $lname,
+             'phonenumber'  =>  $phonenumber]
+        );
     }
 }

@@ -60,7 +60,7 @@
                     </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-                <button type="button" class="btn btn-danger"><i class="fa fa-arrow-left"></i> Back</button>
+                <a type="button" href="{{ url('customers') }}" class="btn btn-danger"><i class="fa fa-arrow-left"></i> Back</a>
                 <button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> Add</button>
             </div><!-- box-footer -->
              </form>
