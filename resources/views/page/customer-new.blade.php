@@ -9,37 +9,52 @@
                 <h3 class="box-title">Add Customer</h3>
             </div><!-- /.box-header -->
             <div class="box-body">
-                <form class="form-horizontal" method="post" action="{{ url('customers/insert') }}">
+                <form class="form-horizontal" method="post" action="{{ url('customers/add') }}">
                     {{ csrf_field() }}
                     <div class="box-body">
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
                             <label class="col-sm-2 control-label">First Name</label>
                             <div class="col-sm-10">
-                                <input type="text" name="firstname" class="form-control" placeholder="">
+                                <input type="text" value="{{ old('firstname') }}" name="firstname" class="form-control" placeholder="">
+                                @if ($errors->has('firstname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('firstname') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Middle Name</label>
                             <div class="col-sm-10">
-                                <input type="text" name="middlename" class="form-control" placeholder="">
+                                <input type="text" name="middlename" value="{{ old('middlename') }}" class="form-control" placeholder="">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
                             <label class="col-sm-2 control-label">Last Name</label>
                             <div class="col-sm-10">
-                                <input type="text" name="lastname" class="form-control" placeholder="">
+                                <input type="text" name="lastname" value="{{ old('lastname') }}" class="form-control" placeholder="">
+                                @if ($errors->has('lastname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('lastname') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label class="col-sm-2 control-label">Email Address</label>
                             <div class="col-sm-10">
-                                <input type="email" name="email" class="form-control" placeholder="">
+                                <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="">
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Phone Number</label>
                             <div class="col-sm-10">
-                                <input type="text" name="phonenumber" class="form-control" placeholder="">
+                                <input type="text" name="phonenumber" value="{{ old('phonenumber') }}" class="form-control" placeholder="">
                             </div>
                         </div>
                     </div>

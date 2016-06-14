@@ -21,7 +21,8 @@ Route::get('/setting', 'HomeController@setting');
 
 Route::get('/customers', 'CustomerController@index');
 Route::get('/customers/add', 'CustomerController@add');
-Route::post('/customers/insert', 'CustomerController@insert');
+
+Route::post('/customers/add', 'CustomerController@insert');
 /*Route::post('/customers/insert', function(){
 	var_dump($_POST);
 });*/

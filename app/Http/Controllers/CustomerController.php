@@ -1,11 +1,12 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+
 
 class CustomerController extends Controller
 {
@@ -19,9 +20,15 @@ class CustomerController extends Controller
     	return view('page.customer-new');
     }
 
-    public function insert()
+    public function insert(Request $request)
     {
-    	 $input = Input::all();
-    	 var_dump($input);
+    	$this->validate($request, [
+	        'firstname' => 'required|max:255',
+	        'lastname' => 'required|max:255',
+	        'email' => 'required|unique:customers|max:255'
+	    ]);
+
+    	$name = $request->input('firstname');
+    	echo $name;
     }
 }
