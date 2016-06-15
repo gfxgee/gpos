@@ -11,7 +11,9 @@ class CustomerController extends Controller
 {
     public function index()
     {
-    	return view('page.customer');
+        $cust = DB::table('customers')->get();
+        //var_dump($cust);
+    	return view('page.customer',['cust' => $cust]);
     }
 
     public function add()
@@ -39,5 +41,7 @@ class CustomerController extends Controller
              'lastname'     =>  $lname,
              'phonenumber'  =>  $phonenumber]
         );
+
+        return redirect('/customers');
     }
 }

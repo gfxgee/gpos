@@ -22,9 +22,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($cust as $c)
                         <tr>
-                            <td>data</td>
+                            <td>{{ $c->customer_id }}</td>
+                            <td>{{ $c->firstname.' '.$c->lastname }}</td>
+                            <td>{{ $c->email }}</td>
+                            <td>{{ $c->phonenumber }}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div><!-- /.box-body -->
