@@ -33,19 +33,19 @@
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="{{ ($controller == 'CustomerController' ? 'active' : '') }}"><a href="{{ url('customers')}}"><i class="fa fa-link"></i> <span>Customers</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Employees</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Items</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Item Kits</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Sales</span></a></li>
+        <li class="{{ ($controller == 'CustomerController' ? 'active' : '') }}"><a href="{{ url('customers')}}"><i class="fa fa-user"></i> <span>Customers</span></a></li>
+        <li><a href="#"><i class="fa fa-users"></i> <span>Employees</span></a></li>
+        <li class="{{ ($controller == 'ItemsController' ? 'active' : '') }}"><a href="{{ url('items')}}"><i class="fa fa-cube"></i> <span>Items</span></a></li>
+        <li><a href="#"><i class="fa fa-cubes"></i> <span>Item Kits</span></a></li>
+        <li><a href="#"><i class="fa fa-dollar"></i> <span>Sales</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Suppliers</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-truck"></i> <span>Suppliers</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li><a href="#">Link in level 2</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Report</span></a></li>
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>Report</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

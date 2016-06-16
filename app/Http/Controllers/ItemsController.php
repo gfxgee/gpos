@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class ItemsController extends Controller
 {
-    //
+    public function index()
+    {
+    	return view('page.item');
+    }
 }
