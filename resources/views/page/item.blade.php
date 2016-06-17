@@ -13,14 +13,14 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <a href="{{ url('customers/add') }}" class="btn btn-primary margin-20 pull-right">New Customer</a>
+                <a href="{{ url('items/add') }}" class="btn btn-primary margin-20 pull-right">New Item</a>
             </div>
         </div>
     </div>
     <div class="col-md-12">
         <div class="box box-solid box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Customer List</h3>
+                <h3 class="box-title">List of Item</h3>
             </div><!-- /.box-header -->
             <div class="box-body">
                 <table class="table table-striped table-condensed">

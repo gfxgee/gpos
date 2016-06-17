@@ -12,4 +12,9 @@ class ItemsController extends Controller
     {
     	return view('page.item');
     }
+
+    public function add()
+    {
+    	return view('page.item-new');
+    }
 }

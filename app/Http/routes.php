@@ -29,6 +29,7 @@ Route::put('/customers/edit/{id}', 'CustomerController@update');
 /* Items */
 
 Route::get('/items','ItemsController@index');
+Route::get('/items/add','ItemsController@add');
 
 /*Route::post('/customers/insert', function(){
 	var_dump($_POST);
